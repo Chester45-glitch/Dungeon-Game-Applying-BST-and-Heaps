@@ -1,0 +1,32 @@
+Description of Each Functionality
+1. DungeonNode Structure
+•	Represents a room in the dungeon.
+•	Contains the following data members:
+o	roomID: An integer ID for the room.
+o	treasure: A string representing the treasure in the room.
+o	tier: A string that categorizes the rarity of the treasure (e.g., "Common", "Rare").
+o	rarity: An integer representing the rarity level of the treasure.
+o	left and right: Pointers to left and right child nodes, representing the binary search tree structure.
+2. Dungeon Class
+•	A binary search tree (BST) to store the rooms of the dungeon.
+•	Functions:
+o	addRoom(int, string, string, int): Adds a room to the dungeon by creating a DungeonNode and placing it at the correct position in the BST based on the roomID.
+o	exploreDungeon(DungeonNode*): Recursively explores the dungeon by traversing the BST and printing out details of each room.
+o	explore(): Initiates the exploration of the dungeon. It calls exploreDungeon if the dungeon is not empty.
+o	findRoom(DungeonNode*, int): Searches for a room in the dungeon by its roomID using a binary search approach.
+o	findRoom(int): A wrapper around the recursive findRoom function to search from the root of the BST.
+3. TreasureBag Class
+•	Implements a max-heap to store treasures with their rarity.
+•	Functions:
+o	addTreasure(int, string): Adds a treasure to the bag, ensuring that the heap property is maintained by calling heapifyUp.
+o	retrieveMostValuable(): Retrieves and removes the most valuable treasure from the bag (the one with the highest rarity), while maintaining the heap property by calling heapifyDown.
+o	displayTreasures(): Displays all the treasures currently in the treasure bag.
+4. GameMenu Function
+•	Displays a menu with options for the player to interact with the game. These options include adding a room, exploring the dungeon, collecting treasures, and more.
+5. getRandomTier Function
+•	Generates a random treasure tier from a list of predefined tiers ("Common", "Rare", "Epic", "Legendary", "Transcended") using the rand() function.
+6. Main Function
+•	Initializes the game by setting up a dungeon and treasure bag.
+•	Presents a loop where the player can choose an action (add room, explore, collect treasures, etc.).
+•	Each action is handled by calling the appropriate function in the Dungeon or TreasureBag class.
+
