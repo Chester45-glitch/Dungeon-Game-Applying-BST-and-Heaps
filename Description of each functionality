@@ -28,5 +28,5 @@ o	displayTreasures(): Displays all the treasures currently in the treasure bag.
 6. Main Function
 •	Initializes the game by setting up a dungeon and treasure bag.
 •	Presents a loop where the player can choose an action (add room, explore, collect treasures, etc.).
-•	Each action is handled by calling the appropriate function in the Dungeon or TreasureBag class.
+•	Each action is handled by calling the appropriate function in the Dungeon or TreasureBag class..
 
